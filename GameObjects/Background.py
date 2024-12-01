@@ -13,7 +13,16 @@ class Background:
         self._chunks = []
 
     def load_sprite(self):
-        pass  # Este método será implementado na próxima etapa
+        # Carrega a imagem do fundo e ajusta para o tamanho necessário
+        self.bg_sprite = pygame.transform.scale(
+            pygame.image.load(os.path.join(config.TEXTURES_DIR, "background-day.png")).convert_alpha(),
+            (288, 512)
+        )
+        self.chunk_width = self.bg_sprite.get_width()
+
+        # Cria os segmentos do fundo
+        for x in range(self.CHUNKS):
+            self._chunks.append([self.bg_sprite, x * self.chunk_width])
 
     def move(self):
         pass  # Este método será implementado na próxima etapa
