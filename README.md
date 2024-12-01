@@ -1,8 +1,7 @@
-# ai_flipbird_neat
-Algoritmo genético para aprendizado de máquina com intuito de aprender a jogar um game no estilo Flib Bird.
-
+#
+#
 # Flappy Bird com Algoritmo Genético (NEAT)
-
+#
 ## Descrição do Projeto
 
 Este projeto implementa um jogo no estilo Flappy Bird, utilizando a biblioteca **NEAT (neat-python)** para simular e treinar um algoritmo genético capaz de aprender a jogar. O código é desenvolvido em **Python 3.11** com o suporte da biblioteca gráfica **Pygame**. Este projeto tem caráter **educativo** e não deve ser utilizado em produção.
