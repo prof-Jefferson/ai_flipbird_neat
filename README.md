@@ -34,6 +34,20 @@ Este projeto implementa um jogo no estilo Flappy Bird, utilizando a biblioteca *
      python main.py
      ```
 
+# Fluxo de Trabalho para o Projeto Flappy Bird AI
+
+## 1. Organização do Ambiente
+
+### Objetivo:
+Garantir que todos os alunos consigam configurar o ambiente corretamente.
+
+### Passos:
+1. Certifique-se de que o **Python 3.11** esteja instalado em todas as máquinas.
+2. Instale as bibliotecas necessárias com o seguinte comando:
+   ```bash
+   pip install pygame neat-python
+
+
 ## Aviso
 
 Este projeto é apenas para fins educativos. Ele foi desenvolvido para ajudar na compreensão de conceitos teóricos e práticos relacionados a algoritmos genéticos e redes neurais. O código não foi projetado para aplicações comerciais ou uso em produção.
