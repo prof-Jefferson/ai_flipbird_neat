@@ -3,7 +3,7 @@ import pygame
 import config
 
 class Background:
-    SPEED = 0.09  # Velocidade do movimento do fundo
+    SPEED = 0.03  # Velocidade do movimento do fundo
     CHUNKS = 3   # Número de segmentos do fundo visíveis
 
     def __init__(self):
