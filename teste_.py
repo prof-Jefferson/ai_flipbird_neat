@@ -22,6 +22,7 @@ while running:
     # Exibir o primeiro frame carregado na tela
     screen.fill((135, 206, 250))  # Fundo azul claro
     screen.blit(bird.frames[0], (bird.x, bird.y))  # Desenha o primeiro frame
-    pygame.display.update()
+    #ird.jump()
+    pygame.display.update()    
 
 pygame.quit()
