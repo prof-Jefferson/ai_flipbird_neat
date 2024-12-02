@@ -44,5 +44,10 @@ class Bird:
         else:
             if self.angle > -90:
                 self.angle -= self.ROTATION_SPEED
+    
+    def jump(self):
+        self.velocity = self.FLAP_POWER
+        self.height = self.y
+
 
 
