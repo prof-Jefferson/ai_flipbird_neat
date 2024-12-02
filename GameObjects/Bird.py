@@ -8,7 +8,7 @@ class Bird:
     ROTATION_SPEED = 20
     GRAVITY = 0.1
     FLAP_POWER = -2
-    AVAILABLE_COLORS = ("blue", "red", "yellow", "black")
+    AVAILABLE_COLORS = ("blue", "red", "yellow", "purple", "toxic", "green", "teal", "pink", "white", "black", "orange")
 
     def __init__(self, name, color, x, y):
         self.name = name
@@ -28,3 +28,21 @@ class Bird:
             for i in range(1, 4)
         ]
         self.cframe = self.frames[0]  # Define o frame inicial
+
+    def move(self):
+        self.velocity += self.GRAVITY
+        self.y += self.velocity
+
+        # Limita a velocidade de queda
+        if self.velocity >= 6:
+            self.velocity = 6
+
+        # Atualiza o ângulo de acordo com o movimento
+        if self.velocity < 0 or self.y < self.height + 50:
+            if self.angle < self.ROTATION_MAX_ANGLE:
+                self.angle = self.ROTATION_MAX_ANGLE
+        else:
+            if self.angle > -90:
+                self.angle -= self.ROTATION_SPEED
+
+

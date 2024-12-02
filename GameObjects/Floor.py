@@ -3,7 +3,7 @@ import pygame
 import config
 
 class Floor:
-    SPEED = 0.15  # Velocidade do movimento do piso
+    SPEED = 0.12  # Velocidade do movimento do piso
     CHUNKS = 3  # Número de segmentos do piso
 
     def __init__(self, y):
