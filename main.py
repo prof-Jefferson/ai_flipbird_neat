@@ -1,6 +1,7 @@
 import pygame
 from GameObjects.Background import Background
 from GameObjects.Floor import Floor
+from GameObjects.Bird import Bird
 
 # Inicializar o Pygame
 pygame.init()
