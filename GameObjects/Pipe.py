@@ -36,6 +36,25 @@ class Pipe:
     def move(self):
         # Move os canos para a esquerda
         self.x -= self.SPEED
+    
+    def collide(self, bird, screen=None):
+        """
+        Verifica se o centro do pássaro colidiu com este cano.
+        :param bird: Objeto do tipo Bird.
+        :param screen: (Opcional) Superfície para debug visual.
+        :return: True se colidir, False caso contrário.
+        """
+        bird_center = bird.x + bird.cframe.get_width() // 2, bird.y + bird.cframe.get_height() // 2
+
+        # Verifica colisão com o cano superior
+        if self.x < bird_center[0] < self.x + self.UPPER_PIPE.get_width() and bird_center[1] < self.top + self.UPPER_PIPE.get_height():
+            return True
+
+        # Verifica colisão com o cano inferior
+        if self.x < bird_center[0] < self.x + self.LOWER_PIPE.get_width() and bird_center[1] > self.bottom:
+            return True
+
+        return False
 
     def draw(self, screen):
         # Renderiza os canos na tela

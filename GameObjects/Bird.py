@@ -48,6 +48,16 @@ class Bird:
     def jump(self):
         self.velocity = self.FLAP_POWER
         self.height = self.y
+    
+    def check_collision_with_floor(self, floor_y):
+        """
+        Verifica se o pássaro colidiu com o piso.
+        :param floor_y: A posição Y do piso.
+        :return: True se colidir, False caso contrário.
+        """
+        if self.y + self.cframe.get_height() >= floor_y:
+            return True
+        return False
 
     def draw(self, screen):
         # Alterna entre os frames para animar
@@ -55,3 +65,10 @@ class Bird:
         rotated_sprite = pygame.transform.rotate(self.cframe, self.angle)
         rect = rotated_sprite.get_rect(center=(self.x, self.y))
         screen.blit(rotated_sprite, rect.topleft)
+    
+    def get_mask(self):
+        """
+        Retorna a máscara de colisão do pássaro.
+        :return: Objeto pygame.Mask
+        """
+        return pygame.mask.from_surface(self.cframe)
