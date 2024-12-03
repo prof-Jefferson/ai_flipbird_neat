@@ -5,7 +5,7 @@ import config
 
 class Pipe:
     GAP_SIZE = 150  # Espaço entre os canos superior e inferior
-    SPEED = 0.12    # Velocidade de movimento dos canos
+    SPEED = 0.0612    # Velocidade de movimento dos canos
 
     def __init__(self, x):
         self.x = x

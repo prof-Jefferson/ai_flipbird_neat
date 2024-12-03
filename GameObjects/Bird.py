@@ -6,8 +6,8 @@ import config
 class Bird:
     ROTATION_MAX_ANGLE = 25
     ROTATION_SPEED = 20
-    GRAVITY = 0.0006
-    FLAP_POWER = -0.25
+    GRAVITY = .0001
+    FLAP_POWER = -0.09
     AVAILABLE_COLORS = ("blue", "red", "yellow", "purple", "toxic", "green", "teal", "pink", "white", "black", "orange")
 
     def __init__(self, name, color, x, y):
@@ -20,6 +20,7 @@ class Bird:
         self.height = self.y
         self.frames = None
         self.cframe = None
+        self.collider_radius = 15  # Raio do colisor do pássaro
 
     def load_frames(self):
         # Carrega os três frames para a animação do pássaro
@@ -65,6 +66,9 @@ class Bird:
         rotated_sprite = pygame.transform.rotate(self.cframe, self.angle)
         rect = rotated_sprite.get_rect(center=(self.x, self.y))
         screen.blit(rotated_sprite, rect.topleft)
+        
+        # Desenhar o colisor como um círculo
+        pygame.draw.circle(screen, (255, 0, 0), (self.x, self.y), self.collider_radius, 1)  # Vermelho para depuração
     
     def get_mask(self):
         """
