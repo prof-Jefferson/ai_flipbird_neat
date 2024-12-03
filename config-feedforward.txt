@@ -1,0 +1,30 @@
+[NEAT]
+fitness_criterion     = max
+fitness_threshold     = 10.0
+pop_size              = 150
+reset_on_extinction   = False
+
+[DefaultGenome]
+input_nodes          = 4
+output_nodes         = 1
+hidden_nodes         = 0
+initial_connection   = full
+activation_default   = sigmoid
+activation_mutate_rate = 0.0
+node_add_prob        = 0.2
+node_delete_prob     = 0.1
+conn_add_prob        = 0.5
+conn_delete_prob     = 0.1
+weight_mutate_rate   = 0.8
+
+[DefaultSpeciesSet]
+compatibility_threshold = 3.0
+
+[DefaultReproduction]
+elitism            = 2
+survival_threshold = 0.2
+
+[DefaultStagnation]
+species_fitness_func = max
+max_stagnation       = 15
+species_elitism      = 1
