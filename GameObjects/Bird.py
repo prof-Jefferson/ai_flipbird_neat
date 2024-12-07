@@ -23,12 +23,16 @@ class Bird:
         self.collider_radius = 15  # Raio do colisor do pássaro
 
     def load_frames(self):
-        # Carrega os três frames para a animação do pássaro
-        self.frames = [
-            pygame.image.load(os.path.join(config.TEXTURES_DIR, f"bird_{self.color}{i}.png")).convert_alpha()
-            for i in range(1, 4)
-        ]
-        self.cframe = self.frames[0]  # Define o frame inicial
+        try:
+            self.frames = [
+                pygame.image.load(os.path.join(config.TEXTURES_DIR, f"bird_{self.color}{i}.png")).convert_alpha()
+                for i in range(1, 4)
+            ]
+            self.cframe = self.frames[0]  # Define o frame inicial como o primeiro frame
+            print(f"[DEBUG] Frames carregados para {self.name}: {self.frames}")
+        except FileNotFoundError as e:
+            print(f"[ERRO] Não foi possível carregar os frames para {self.name}: {e}")
+            raise
 
     def move(self):
         self.velocity += self.GRAVITY
