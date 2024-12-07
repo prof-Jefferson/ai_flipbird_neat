@@ -28,13 +28,18 @@ Este projeto implementa um jogo no estilo Flappy Bird, utilizando a biblioteca *
      ```
 
 2. **Execução**:
-   - Clone ou baixe este repositório.
-   - Execute o arquivo principal do projeto:
-     ```bash
-     python main.py
-     ```
+# Meu Jogo com Python, Pygame e NEAT
+
+Este é um jogo simples desenvolvido em Python usando Pygame e NEAT.
+
+## Instalação
+3. Clone o repositório:
+   git clone https://github.com/prof-Jefferson/ai_flipbird_neat.git
+   cd ai_flipbird_neat
+   python3 main.py # para rodar o jogo como humano
+   python3 ai_main.py # para rodar o modo de treinamento
 
 ## Aviso
 
-Este projeto é apenas para fins educativos. Ele foi desenvolvido para ajudar na compreensão de conceitos teóricos e práticos relacionados a algoritmos genéticos e redes neurais. O código não foi projetado para aplicações comerciais ou uso em produção.
 
+---
